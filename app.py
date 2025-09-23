@@ -734,9 +734,10 @@ st.markdown(
     }
     </style>
     <div class="footer">
-        Análise de Pavimentos com Streamlit | Protótipo criado por Wallas Borges
+        Análise de Pavimentos | Protótipo criado por Wallas Borges
     </div>
     """,
     unsafe_allow_html=True
 
 )
+
