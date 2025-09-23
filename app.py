@@ -705,8 +705,8 @@ elif app_mode == "📈 Resultados do Modelo":
         # Simular análise de erros
         error_analysis = pd.DataFrame({
             'Tipo de Erro': ['Falso Positivo', 'Falso Negativo', 'Verdadeiro Positivo', 'Verdadeiro Negativo'],
-            'Quantidade': [45, 32, 243, 680],
-            'Custo Relativo': ['Baixo', 'Alto', 'N/A', 'N/A']
+            'Quantidade': [0, 0, 998, 1002],
+            'Custo Relativo': ['N/A', 'N/A', 'N/A', 'N/A']
         })
         
         st.dataframe(error_analysis, use_container_width=True)
@@ -738,4 +738,5 @@ st.markdown(
     </div>
     """,
     unsafe_allow_html=True
+
 )
