@@ -44,11 +44,7 @@ app_mode = st.sidebar.selectbox(
 def load_data_and_model():
     """Carrega dados e modelo com cache para melhor performance"""
     try:
-        # Aqui você precisa ajustar os caminhos para seus arquivos
-        # df_pavement = pd.read_csv('ESC 12 Pavement Dataset.csv')
-        # df_pavement = df_pavement.sample(10000, random_state=42)
-
-
+    
         path = kagglehub.dataset_download("gifreysulay/pavement-dataset")
 
         for f in os.listdir(path):
@@ -70,44 +66,6 @@ def load_data_and_model():
             history = joblib.load(HISTORY_PATH)
         except:
             history = None
-
-        # model = keras.models.load_model('road_maintenance_rede_neural.keras')
-        # pipeline = joblib.load('road_maintenance_rede_neural.pkl')
-
-        # try:
-        #     history = joblib.load('training_history.pkl')
-        # except:
-        #     # Opção 2: Se o histórico está no objeto history do Keras
-        #     # (precisa ser salvo durante o treinamento)
-        #     history = None
-        
-        # Por enquanto, vou criar dados de exemplo para demonstração
-        # np.random.seed(42)
-        # n_samples = 1000
-        
-        # data = {
-        #     'PCI': np.random.uniform(0, 100, n_samples),
-        #     'AADT': np.random.randint(100, 10000, n_samples),
-        #     'Last Maintenance': np.random.randint(0, 10, n_samples),
-        #     'Average Rainfall': np.random.uniform(500, 2000, n_samples),
-        #     'Rutting': np.random.uniform(0, 20, n_samples),
-        #     'IRI': np.random.uniform(1, 10, n_samples),
-        #     'Road Type': np.random.choice(['Primary', 'Secondary', 'Tertiary'], n_samples),
-        #     'Asphalt Type': np.random.choice(['Type_A', 'Type_B', 'Type_C'], n_samples),
-        #     'Needs Maintenance': np.random.choice([0, 1], n_samples, p=[0.7, 0.3])
-        # }
-        
-        # df_pavement = pd.DataFrame(data)
-        
-        # Criar um modelo dummy para demonstração
-        # Em produção, carregue seu modelo real
-
-        # class DummyModel:
-        #     def predict(self, X):
-        #         return np.random.uniform(0, 1, (X.shape[0], 1))
-        
-        # model = DummyModel()
-        # #pipeline = None
 
         st.success("✅ Dados e modelo carregados com sucesso!")
         return df_pavement, model, pipeline, history
@@ -740,4 +698,5 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
