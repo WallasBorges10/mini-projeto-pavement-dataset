@@ -17,9 +17,6 @@ import kagglehub
 from kagglehub import KaggleDatasetAdapter
 import os
 
-
-
-
 # Configuração da página
 st.set_page_config(
     page_title="Análise de Pavimentos",
@@ -698,5 +695,6 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
