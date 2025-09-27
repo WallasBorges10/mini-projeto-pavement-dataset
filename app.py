@@ -138,7 +138,7 @@ def prediction_section():
         st.markdown("---")
 
         # --- ANÁLISE TÉCNICA DE SENSIBILIDADE COM GRÁFICO ---
-        with st.expander("🔬 Clique para ver a Análise Técnica Detalhada"):
+        with st.expander("🔬 Clique para ver a Análise Detalhada"):
             st.subheader("Análise de Contribuição dos Atributos")
             st.markdown("""
             O gráfico interativo abaixo mostra o impacto de cada atributo na predição. Simulamos o "pior cenário" para cada variável e medimos o quanto a probabilidade de manutenção **aumentaria**. 
@@ -364,3 +364,4 @@ if df is not None:
     elif page == "Visão Geral dos Dados":
 
         data_overview_section()
+
