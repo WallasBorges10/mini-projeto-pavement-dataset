@@ -68,7 +68,7 @@ def load_data_and_model():
 df, model, pipeline, history = load_data_and_model()
 
 # --- SIDEBAR DE NAVEGAÇÃO ---
-st.sidebar.title("🛣️ Análise de Pavimentos")
+st.sidebar.title("🛣️ Análise e Predição de Manutenção de Pavimentos")
 st.sidebar.markdown("---")
 page = st.sidebar.radio(
     "Navegue pelas seções:",
@@ -362,4 +362,5 @@ if df is not None:
         import plotly.graph_objects as go # Importar aqui para evitar carregar em todas as páginas
         modeling_section()
     elif page == "Visão Geral dos Dados":
+
         data_overview_section()
